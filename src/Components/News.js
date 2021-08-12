@@ -10,7 +10,7 @@ export default function News() {
   useEffect(() => {
     fetch(API_ENDPOINT + "/topstories.json").then(async (rsp) => {
       const stories = await rsp.json();
-      _stories.current = stories.map((id) => ({ id })).slice(0, 10)
+      _stories.current = stories.map((id) => ({ id }))
       setStories(_stories.current);
     });
   }, []);
