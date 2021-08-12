@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import dayjs from 'dayjs';
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
+
+export const API_ENDPOINT = "https://hacker-news.firebaseio.com/v0";
 
 ReactDOM.render(
   <React.StrictMode>
